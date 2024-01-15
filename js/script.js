@@ -60,7 +60,42 @@ for (let i = 0; i < team.length; i++) {
     const member = team[i];
 
     const teamItem = document.createElement("li");
-    teamItem.innerText = `Nome: ${member.name} - Ruolo: ${member.role} - Foto: ${member.photo}`;
+    teamItem.innerHTML = `<u>Name</u>: ${member.name} - <u>Role</u>: ${member.role} - <u>Photo</u>: ${member.photo}`;
 
     teamList.appendChild(teamItem);
+}
+
+
+//--------------------------------
+//* BONUS
+//--------------------------------
+
+const row = document.querySelector('.row');
+
+for (let i = 0; i < team.length; i++) {
+    const member = team[i];
+
+    const col = document.createElement("div");
+    col.classList.add("col");
+
+    const card = document.createElement("div");
+    card.classList.add("card");
+
+    const img = document.createElement("img");
+    img.src = "img/" + member.photo;
+    img.alt = member.name;
+
+    const name = document.createElement("h3");
+    name.innerText = `${member.name}`;
+
+    const role = document.createElement("h5");
+    role.innerText = `${member.role}`;
+
+
+    card.appendChild(img);
+    card.appendChild(name);
+    card.appendChild(role);
+
+    col.appendChild(card);
+    row.appendChild(col);
 }
