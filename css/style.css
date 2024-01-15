@@ -1,14 +1,18 @@
-p {
-    margin: 20px auto;
-    line-height: 40px;
-}
-
 img {
     max-width: 100%;
     display: block;
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
 
+}
+
+p {
+    margin: 20px auto;
+    line-height: 40px;
+}
+
+ul {
+    list-style-type: none;
 }
 
 .col {

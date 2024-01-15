@@ -1,5 +1,9 @@
 console.log('JS OK');
 
+//--------------------------------
+//* MILESTONE 0
+//--------------------------------
+
 const team = [
     {
         name: "Wayne Barnett",
@@ -36,7 +40,27 @@ const team = [
 console.log(team);
 
 
+//--------------------------------
+//* MILESTONE 1
+//--------------------------------
+
 for (let i = 0; i < team.length; i++) {
     const member = team[i];
     console.log(`Nome: ${member.name}, Ruolo: ${member.role}, Foto: ${member.photo}`);
 };
+
+
+//--------------------------------
+//* MILESTONE 2
+//--------------------------------
+
+const teamList = document.querySelector("ul");
+
+for (let i = 0; i < team.length; i++) {
+    const member = team[i];
+
+    const teamItem = document.createElement("li");
+    teamItem.innerText = `Nome: ${member.name} - Ruolo: ${member.role} - Foto: ${member.photo}`;
+
+    teamList.appendChild(teamItem);
+}
