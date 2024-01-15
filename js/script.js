@@ -34,3 +34,9 @@ const team = [
 ];
 
 console.log(team);
+
+
+for (let i = 0; i < team.length; i++) {
+    const member = team[i];
+    console.log(`Nome: ${member.name}, Ruolo: ${member.role}, Foto: ${member.photo}`);
+};
